@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intengrantes de mi Familia!!!</title>
+</head>
+<body>
+    <h1 style="color:darkcyan  "> Bienvenidos a mi web</h1>
+
+    <h3><p> Este es mi proyecto!!!</p></h3>
+
+    <h2><p> Hola {{nombre}} {{apellido}}</p></h2>
+    <p>{{fecha}}</p>
+
+    {% if Integrantes == 'Familia Salazar Fuentes' %}
+        <h1 style='color: rgb(2, 89, 250)'> Integrantes de {{Integrantes}} </h1>
+    {% elif Integrantes == 'Otra Familia' %}
+        <h1 style='color: rgb(10, 5, 8)'> Integrantes de {{Integrantes}} </h1>
+    {% else %}
+        <h1> Integrantes de {{Integrantes}}</h1> 
+    {% endif %}
+    
+        <img style= 'max-width: 1000px;'
+    src="https://images.pexels.com/photos/2253879/pexels-photo-2253879.jpeg?cs=srgb&dl=pexels-emma-bauso-2253879.jpg&fm=jpg&_gl=1*phrb71*_ga*MjA1MTM3NTgxMS4xNjY3ODQ0ODk3*_ga_8JE65Q40S6*MTY2Nzg1OTcyMS4zLjEuMTY2Nzg1OTczNi4wLjAuMA.." alt="">
+
+    <h3><p> Listado de Familia:</p></h3>
+    
+    <ul>
+        {% for Familia in listado_familia %}
+        <li> {{Familia}} </li>
+        
+        {% endfor %}
+    </ul>
+
+    
+</body>
+</html>
