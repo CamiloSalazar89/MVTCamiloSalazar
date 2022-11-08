@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from MVPCamiloSalazar.views import *
+from appcoder.views import listado_familia
 
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Familia/', MVT01 )
+    path('Familia/', MVT01 ),
+    path('Familiares/', listado_familia),
 ]
